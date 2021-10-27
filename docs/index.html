@@ -1,0 +1,100 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winged Light Checklist &mdash; Sky: Children of the Light</title>
+</head>
+<body>
+  <section id="wings">
+    <h1>Summary</h1>
+    <table>
+      <tbody>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Winged Light</th>
+            <th>Ancestor Spirit Wing Buffs</th>
+            <th>Wandering Spirit Wing Buffs</th>
+            <th>Total Winged Light</th>
+          </tr>
+        </thead>
+        <tr>
+          <th>Available</th>
+          {%- assign stars = site.data.collectibles.stars.size -%}
+          {%- assign ancestor_buffs = 47 -%}
+          {%- assign wandering_buffs = 0 -%}
+          <td><input type="number" value="{{ stars }}" readonly="readonly" disabled="disabled"></input></td>
+          <td><input type="number" value="{{ ancestor_buffs }}" readonly="readonly" disabled="disabled"></input></td>
+          <td><input type="number" value="{{ wandering_buffs }}" readonly="readonly" disabled="disabled"></input></td>
+          <td><input type="text" value="{{ stars | plus: ancestor_buffs | plus: wandering_buffs }}" readonly="readonly" disabled="disabled"></input></td>
+        </tr>
+        <tr>
+          <th>Collected</th>
+          <td>
+            <!-- Winged Light -->
+            <input type="number" value="0"></input>
+            <input type="text" value="0%" readonly="readonly" disabled="disabled"></input>
+          </td>
+          <td>
+            <!-- Ancestor Spirits -->
+            <input type="number" value="0"></input>
+            <input type="text" value="0%" readonly="readonly" disabled="disabled"></input>
+          </td>
+          <td>
+            <!-- Wandering Spirits -->
+            <input type="number" value="0"></input>
+            <input type="text" value="0%" readonly="readonly" disabled="disabled"></input>
+          </td>
+          <td>
+            <!-- Totals -->
+            <input type="number" value="0" readonly="readonly" disabled="disabled"></input>
+            <input type="text" value="0%" readonly="readonly" disabled="disabled"></input>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="stars">
+    <h1>List of Winged Light</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Acquired</th>
+          <th>Realm</th>
+          <th>Area</th>
+          <th>Id</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- for star in site.data.collectibles.stars -%}
+          {% assign id = star[0] %}
+          {% assign light = star[1] %}
+          {% assign area = site.data.collectibles.areas[light.area] %}
+          {% assign realm = site.data.collectibles.realms[area.realm] %}
+          <tr>
+            <td><input type="checkbox" name="{{ id }}" id="{{ id }}"></td>
+            <td>{{ realm }}</td>
+            <td>
+              {%- if area.subtitle -%}
+              <span class="place-subtitle">{{ area.subtitle }}</span>:&nbsp;
+              {%- endif -%}
+              <span class="place-name">{{ area.name }}</span>
+              {%- if area.caption -%}
+              &nbsp;<span class="place-caption">({{ area.caption }})</span>
+              {%- endif -%}
+            </td>
+            <td><a href="#{{ id }}">{{ id }}</a></td>
+            <td>{{ light.description }}</td>
+          </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>

@@ -1,1 +1,9 @@
 theme: jekyll-theme-tactile
+
+liquid:
+  error_mode: strict
+
+assets:
+  sources:
+    - index.html
+    - _data/collectibles.yml
