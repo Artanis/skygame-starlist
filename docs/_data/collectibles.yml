@@ -26,18 +26,18 @@ areas:
   &AR_C_SUNNY         AR_C_010: {realm: *RLM_C_FOREST, name: Sunny Forest}
   &AR_C_CAVERN        AR_C_011: {realm: *RLM_C_FOREST, name: Underground Cavern}
   &AR_C_BONEYARD      AR_C_012: {realm: *RLM_C_FOREST, name: Boneyard}
-  &AR_C_FORESTTEMPLE  AR_C_013: {realm: *RLM_C_FOREST, name: Temple, subtitle: Forest's End}
+  &AR_C_FORESTTEMPLE  AR_C_013: {realm: *RLM_C_FOREST, name: Temple, caption: Forest's End}
 
   &AR_C_SLIDE         AR_C_014: {realm: *RLM_C_VALLEY, name: First Slide}
   &AR_C_RINK          AR_C_015: {realm: *RLM_C_VALLEY, name: Ice Rink}
   &AR_C_CITADEL       AR_C_016: {realm: *RLM_C_VALLEY, name: Citadel}
   &AR_C_FLYRACE       AR_C_017: {realm: *RLM_C_VALLEY, name: Flying Race}
-  &AR_C_COLISEUM      AR_C_018: {realm: *RLM_C_VALLEY, name: Coliseum, subtitle: Race's End}
+  &AR_C_COLISEUM      AR_C_018: {realm: *RLM_C_VALLEY, name: Coliseum, caption: Race's End}
   &AR_C_SLIDERACE     AR_C_019: {realm: *RLM_C_VALLEY, name: Sliding Race}
   &AR_C_VALLEYTEMPLE  AR_C_020: {realm: *RLM_C_VALLEY, name: Temple}
 
   &AR_C_WASTES        AR_C_021: {realm: *RLM_C_WASTELAND, name: Wastes, caption: Outside the Broken Temple}
-  &AR_C_GRAVEYARD     AR_C_022: {realm: *RLM_C_WASTELAND, name: Graveyard, caption: Inside the Broken Temple}
+  &AR_C_GRAVEYARD     AR_C_022: {realm: *RLM_C_WASTELAND, name: Graveyard, caption: Broken Temple}
   &AR_C_BATTLEFIELD   AR_C_023: {realm: *RLM_C_WASTELAND, name: Battlefield}
   &AR_C_SHIPWRECK     AR_C_024: {realm: *RLM_C_WASTELAND, name: Shipwreck}
   &AR_C_WASTESTEMPLE  AR_C_025: {realm: *RLM_C_WASTELAND, name: Temple}
@@ -47,7 +47,7 @@ areas:
   &AR_C_VAULT3        AR_C_028: {realm: *RLM_C_VAULT, name: Third Floor, caption: Hidden Forest}
   &AR_C_VAULT4        AR_C_029: {realm: *RLM_C_VAULT, name: Fourth Floor, caption: Valley of Triumph}
   &AR_C_VAULT5        AR_C_030: {realm: *RLM_C_VAULT, name: Fifth Floor, caption: Golden Wasteland}
-  &AR_C_VAULTTEMPLE   AR_C_031: {realm: *RLM_C_VAULT, name: Sixth Floor, caption: Vault Summit}
+  &AR_C_VAULT6        AR_C_031: {realm: *RLM_C_VAULT, name: Sixth Floor, caption: Vault Summit}
   &AR_C_ARCHIVES      AR_C_032: {realm: *RLM_C_VAULT, name: Archives}
 
   &AR_C_PRELUDE       AR_C_033: {realm: *RLM_C_EYE, name: Prelude, caption: Wind and Rocks}
@@ -68,135 +68,134 @@ areas:
 
 stars:
   # Isle of Dawn (5)
-  WL_C_000: {area: *AR_C_ISLE, description: "Above the entrance to the cave pathway at the start of the area."}
-  WL_C_001: {area: *AR_C_ISLE, description: "On the stranded boat in the depression after the cave pathway."}
-  WL_C_002: {area: *AR_C_ISLE, description: "In an alcove to the right of the ramp to the Temple."}
-  WL_C_003: {area: *AR_C_ISLE, description: "In an alcove in the cave within the floating island to the right of the Temple."}
-  WL_C_004: {area: *AR_C_ISLE, description: "At the peak of the ramp to the Temple."}
+  WL_C_000: {area: *AR_C_ISLE,         visit: 1,   description: "Above the entrance to the cave pathway at the start of the area."}
+  WL_C_001: {area: *AR_C_ISLE,         visit: 2,   description: "On the stranded boat in the depression after the cave pathway."}
+  WL_C_002: {area: *AR_C_ISLE,         visit: 3,   description: "In an alcove to the right of the ramp to the Temple."}
+  WL_C_003: {area: *AR_C_ISLE,         visit: 4,   description: "In an alcove in the cave within the floating island to the right of the Temple."}
+  WL_C_004: {area: *AR_C_ISLE,         visit: 5,   description: "At the peak of the ramp to the Temple."}
 
   # Prairie (13)
-  WL_C_005: {area: *AR_C_BUTTERFLY, description: "Gateway to Villages."}
-  WL_C_006: {area: *AR_C_BUTTERFLY, description: "Top of hollow boulder."}
-  WL_C_007: {area: *AR_C_BUTTERFLY, description: "First cave on the left."}
-  WL_C_008: {area: *AR_C_VILLAGES, description: "Left island, behind a 2-player door."}
-  WL_C_009: {area: *AR_C_VILLAGES, description: "Opposite side of the back middle island."}
-  WL_C_010: {area: *AR_C_VILLAGES, description: "Front middle island, in the open."}
-  WL_C_011: {area: *AR_C_VILLAGES, description: "On top of Prairie Temple, above door."}
-  WL_C_012: {area: *AR_C_VILLAGES, description: "On the peak of the Prairie Temple roof."}
-  WL_C_013: {area: *AR_C_CAVES, description: "In an alcove high up on the left cave wall."}
-  WL_C_013: {area: *AR_C_CAVES, description: "In a tunnel high up on the right cave wall."}
-  WL_C_014: {area: *AR_C_BIRDNEST, description: "Below gateway to Villages."}
-  WL_C_015: {area: *AR_C_BIRDNEST, description: "Left of gateway to Villages."}
-  WL_C_016: {area: *AR_C_CEREMONY, description: "In a hollow high up in the tree, left and back from the portal out of the area."}
+  WL_C_005: {area: *AR_C_BUTTERFLY,    visit: 6,   description: "Forward, at the gateway to Villages."}
+  WL_C_006: {area: *AR_C_BUTTERFLY,    visit: 7,   description: "On the left, on top of hollow boulder."}
+  WL_C_007: {area: *AR_C_BUTTERFLY,    visit: 8,   description: "On the left, within a small cave."}
+  WL_C_008: {area: *AR_C_VILLAGES,     visit: 11,  description: "Left island, behind a 2-player door."}
+  WL_C_009: {area: *AR_C_VILLAGES,     visit: 12,  description: "Opposite side of the back middle island."}
+  WL_C_010: {area: *AR_C_VILLAGES,     visit: 13,  description: "Front middle island, in the open."}
+  WL_C_011: {area: *AR_C_VILLAGES,     visit: 15,  description: "On top of Prairie Temple, above door."}
+  WL_C_012: {area: *AR_C_VILLAGES,     visit: 16,  description: "On the peak of the Prairie Temple roof."}
+  WL_C_013: {area: *AR_C_CAVES,        visit: 9,   description: "In an alcove high up on the left cave wall."}
+  WL_C_014: {area: *AR_C_CAVES,        visit: 10,  description: "In a tunnel high up on the right cave wall."}
+  WL_C_015: {area: *AR_C_BIRDNEST,     visit: 17,  description: "Below gateway to Villages."}
+  WL_C_016: {area: *AR_C_BIRDNEST,     visit: 18,  description: "Left of gateway to Villages."}
+  WL_C_017: {area: *AR_C_CEREMONY,     visit: 14,  description: "In a hollow high up in the tree, left and back from the portal out of the area."}
   
   # Hidden Forest (16)
-  WL_C_017: {area: *AR_C_CLEARING, description: "On a platform high in a tree to the right of the gate in the wall."}
-  WL_C_018: {area: *AR_C_CLEARING, description: "In front of the gate to the next area."}
-  WL_C_019: {area: *AR_C_RIVER, description: "On the left, in a cave blocked by dark plants. Look for the rock ramp pointing towards the cliff face."}
-  WL_C_020: {area: *AR_C_RIVER, description: "On the left near the end of the area, on a platform in a tree. Climb the glowing mushrooms on the tree trunk."}
-  WL_C_021: {area: *AR_C_RIVER, description: "In the cave tunnel that leads to the next area."}
-  WL_C_022: {area: *AR_C_RIVER, description: "In a tree to the right of the small temple on the right. Climb the glowing mushrooms on the tree trunk."}
-  WL_C_023: {area: *AR_C_SUNNY, description: "On the right, on a pathway winding around the trees half way up."}
-  WL_C_024: {area: *AR_C_SUNNY, description: "On a a hill to the right of the bridge across the canyon."}
-  WL_C_025: {area: *AR_C_CAVERN, description: "In a cave to the left of the entrance, standing on a pillar. The birds in the cavern come from this cave, follow them back to the source."}
-  WL_C_026: {area: *AR_C_CAVERN, description: "In a cave to the left of the entrance, in an alcove near the top of a tall vertical cave. Use the butterflies at the bottom to float up to the alcove."}
-  WL_C_027: {area: *AR_C_CAVERN, description: "Behind a gate to the right of the entrance."}
-  WL_C_028: {area: *AR_C_CAVERN, description: "At the top of the cavern, to the left of the exit."}
-  WL_C_029: {area: *AR_C_BONEYARD, description: "In the hollow at the bottom of a tree on the right. Look for stairs leading to the tree from the first fallen hollow tree trunk on the path."}
-  WL_C_030: {area: *AR_C_BONEYARD, description: "At the end of the bridge puzzle leading to the exit of the area."}
-  WL_C_031: {area: *AR_C_BONEYARD, description: "High in a tower on the left, behind a 4 spirit barrier."}
-  WL_C_032: {area: *AR_C_FORESTTEMPLE, description: "On a tree stump on the left."}
+  WL_C_018: {area: *AR_C_CLEARING,     visit: 30,  description: "On a platform high in a tree to the right of the gate in the wall."}
+  WL_C_019: {area: *AR_C_CLEARING,     visit: 31,  description: "In front of the gate to the next area."}
+  WL_C_020: {area: *AR_C_RIVER,        visit: 32,  description: "On the left, in a cave blocked by dark plants. Look for the rock ramp pointing towards the cliff face."}
+  WL_C_021: {area: *AR_C_RIVER,        visit: 33,  description: "On the left near the end of the area, on a platform in a tree. Climb the glowing mushrooms on the tree trunk."}
+  WL_C_022: {area: *AR_C_RIVER,        visit: 34,  description: "In the cave tunnel that leads to the next area."}
+  WL_C_023: {area: *AR_C_RIVER,        visit: 35,  description: "In a tree to the right of the small temple on the right. Climb the glowing mushrooms on the tree trunk."}
+  WL_C_024: {area: *AR_C_SUNNY,        visit: 36,  description: "On the right, on a pathway winding around the trees half way up."}
+  WL_C_025: {area: *AR_C_SUNNY,        visit: 37,  description: "On a a hill to the right of the bridge across the canyon."}
+  WL_C_026: {area: *AR_C_CAVERN,       visit: 39,  description: "In a cave to the left of the entrance, standing on a pillar. The birds in the cavern come from this cave, follow them back to the source."}
+  WL_C_027: {area: *AR_C_CAVERN,       visit: 40,  description: "In a cave to the left of the entrance, in an alcove near the top of a tall vertical cave. Use the butterflies at the bottom to float up to the alcove."}
+  WL_C_028: {area: *AR_C_CAVERN,       visit: 38,  description: "Behind a gate to the right of the entrance."}
+  WL_C_029: {area: *AR_C_CAVERN,       visit: 41,  description: "At the top of the cavern, to the left of the exit."}
+  WL_C_030: {area: *AR_C_BONEYARD,     visit: 44,  description: "In the hollow at the bottom of a tree on the right. Look for stairs leading to the tree from the first fallen hollow tree trunk on the path."}
+  WL_C_031: {area: *AR_C_BONEYARD,     visit: 42,  description: "At the end of the bridge puzzle leading to the exit of the area."}
+  WL_C_032: {area: *AR_C_BONEYARD,     visit: 43,  description: "High in a tower on the left, behind a 4 spirit barrier."}
+  WL_C_033: {area: *AR_C_FORESTTEMPLE, visit: 45,  description: "In the grove after the Temple, on a tree stump on the left."}
 
   # Valley of Triumph (11)
-  WL_C_033: {area: *AR_C_SLIDE, description: "On the left, at the start of the slide."}
-  WL_C_034: {area: *AR_C_RINK, description: "In the middle of the lake, on a platform on the island."}
-  WL_C_035: {area: *AR_C_RINK, description: "Under the ice, on an ice ramp."}
-  WL_C_036: {area: *AR_C_CITADEL, description: "At the top of the left-most tower."}
-  WL_C_037: {area: *AR_C_CITADEL, description: "In an alcove in the back-right tower."}
-  WL_C_038: {area: *AR_C_FLYRACE, description: "Inside the right building of the second bridge (autocollect)."}
-  WL_C_039: {area: *AR_C_FLYRACE, description: "On a spire in the area with floating rocks (autocollect). Collide with a floating rock to lose speed and make approach easier."}
-  WL_C_040: {area: *AR_C_COLISEUM, description: "Immediately before the entrance to the coliseum (autocollect)."}
-  WL_C_041: {area: *AR_C_COLISEUM, description: "On the shoulder of the statue to the left of the exit of the coliseum."}
-  WL_C_042: {area: *AR_C_SLIDERACE, description: "On a ramp just after a bridge corssing the path in the narrow part of the race (autocollect)."}
-  WL_C_043: {area: *AR_C_VALLEYTEMPLE, description: "In a room high up in the wall on the left. Follow the hallway to the blue-lighted room with a ladder in it."}
+  WL_C_034: {area: *AR_C_SLIDE,        visit: 46,  description: "On the left, at the start of the slide."}
+  WL_C_035: {area: *AR_C_RINK,         visit: 47,  description: "In the middle of the lake, on a platform on the island."}
+  WL_C_036: {area: *AR_C_RINK,         visit: 48,  description: "Under the ice, on an ice ramp."}
+  WL_C_037: {area: *AR_C_CITADEL,      visit: 49,  description: "At the top of the left-most tower."}
+  WL_C_038: {area: *AR_C_CITADEL,      visit: 50,  description: "In an alcove in the back-right tower."}
+  WL_C_039: {area: *AR_C_FLYRACE,      visit: 51,  description: "Inside the right building of the second bridge (autocollect)."}
+  WL_C_040: {area: *AR_C_FLYRACE,      visit: 52,  description: "On a spire in the area with floating rocks (autocollect). Collide with a floating rock to lose speed and make approach easier."}
+  WL_C_041: {area: *AR_C_COLISEUM,     visit: 53,  description: "Immediately before the entrance to the coliseum (autocollect)."}
+  WL_C_042: {area: *AR_C_COLISEUM,     visit: 54,  description: "On the shoulder of the statue to the left of the exit of the coliseum."}
+  WL_C_043: {area: *AR_C_SLIDERACE,    visit: 60,  description: "On a ramp just after a bridge corssing the path in the narrow part of the race (autocollect)."}
+  WL_C_044: {area: *AR_C_VALLEYTEMPLE, visit: 61,  description: "In a room high up in the wall on the left. Follow the hallway to the blue-lighted room with a ladder in it."}
   
   # Golden Wasteland (14)
-  WL_C_044: {area: *AR_C_WASTES, description: "On top of a pillar near where you land at the start of the area."}
-  WL_C_045: {area: *AR_C_WASTES, description: "Next to the polluted lake on the path to the door."}
-  WL_C_046: {area: *AR_C_GRAVEYARD, description: "In the Broken Temple, on the right, on top of a sunken building. A Dark Dragon patrols this spot."}
-  WL_C_047: {area: *AR_C_GRAVEYARD, description: "In the Broken Temple, between two trusses on the right of the hallway to the Graveyard."}
-  WL_C_048: {area: *AR_C_GRAVEYARD, description: "On a mesa to near the entrance to Shipwreck. Dark Dragons patrol this spot."}
-  WL_C_049: {area: *AR_C_GRAVEYARD, description: "Inside a pipe to the left of the hollow mountain in the middle. Dark Dragons patrol nearby, but the pipe and beach to the right of the mountain are safe."}
-  WL_C_050: {area: *AR_C_GRAVEYARD, description: "On the back side of the hollow mountain in the middle, high up on a ledge. Easily seen from the exit to Battlefield. Dark Dragons patrol this spot."}
-  WL_C_051: {area: *AR_C_GRAVEYARD, description: "On the stairs leading to Battlefield. Dark Dragons patrol this spot."}
-  WL_C_052: {area: *AR_C_BATTLEFIELD, description: "On the roof of a tower of the fortress in the middle of the area."}
-  WL_C_053: {area: *AR_C_BATTLEFIELD, description: "Behind a piller to the right of the exit to the Wasteland Temple."}
-  WL_C_054: {area: *AR_C_SHIPWRECK, description: "On the cliff face to the right of the entrance from Graveyard, opposite a tower to the right of the boat."}
-  WL_C_055: {area: *AR_C_SHIPWRECK, description: "Inside the ship, through the breach in the hull spilling golden jars."}
-  WL_C_056: {area: *AR_C_SHIPWRECK, description: "To the right of the exit to Battlefield, by the sea. Obscured by rocks and pipes."}
-  WL_C_057: {area: *AR_C_WASTESTEMPLE, description: "In the center of the room."}
+  WL_C_045: {area: *AR_C_WASTES,       visit: 62,  description: "On top of a pillar near where you land at the start of the area."}
+  WL_C_046: {area: *AR_C_WASTES,       visit: 63,  description: "Next to the polluted lake on the path to the door."}
+  WL_C_047: {area: *AR_C_GRAVEYARD,    visit: 66,  description: "In the Broken Temple, on the right, on top of a sunken building. A Dark Dragon patrols this spot."}
+  WL_C_048: {area: *AR_C_GRAVEYARD,    visit: 67,  description: "In the Broken Temple, between two trusses on the right of the hallway to the Graveyard."}
+  WL_C_049: {area: *AR_C_GRAVEYARD,    visit: 76,  description: "On a mesa to near the entrance to Shipwreck. Dark Dragons patrol this spot."}
+  WL_C_050: {area: *AR_C_GRAVEYARD,    visit: 75,  description: "Inside a pipe to the left of the hollow mountain in the middle. Dark Dragons patrol nearby, but the pipe and beach to the right of the mountain are safe."}
+  WL_C_051: {area: *AR_C_GRAVEYARD,    visit: 74,  description: "On the back side of the hollow mountain in the middle, high up on a ledge. Easily seen from the exit to Battlefield. Dark Dragons patrol this spot."}
+  WL_C_052: {area: *AR_C_GRAVEYARD,    visit: 73,  description: "On the stairs leading to Battlefield. Dark Dragons patrol this spot."}
+  WL_C_053: {area: *AR_C_BATTLEFIELD,  visit: 72,  description: "On the roof of a tower of the fortress in the middle of the area."}
+  WL_C_054: {area: *AR_C_BATTLEFIELD,  visit: 71,  description: "Behind a piller to the right of the exit to the Wasteland Temple."}
+  WL_C_055: {area: *AR_C_SHIPWRECK,    visit: 68,  description: "On the cliff face to the right of the entrance from Graveyard, opposite a tower to the right of the boat."}
+  WL_C_056: {area: *AR_C_SHIPWRECK,    visit: 69,  description: "Inside the ship, through the breach in the hull spilling golden jars."}
+  WL_C_057: {area: *AR_C_SHIPWRECK,    visit: 70,  description: "To the right of the exit to Battlefield, by the sea. Obscured by rocks and pipes."}
+  WL_C_058: {area: *AR_C_WASTESTEMPLE, visit: 77,  description: "In the center of the room."}
   
   # Vault of Knowledge (8)
-  WL_C_058: {area: *AR_C_VAULT1, description: "At the top of the ladder on the left."}
-  WL_C_059: {area: *AR_C_VAULT3, description: "On the roof of the small temple on a floating island. Follow the floating rock slabs to the right of the Daylight Prairie constellation."}
-  WL_C_060: {area: *AR_C_VAULT4, description: "Near the Isle of Dawn constellation, on the highest platform surrounded by stone pillars and a ring of candles."}
-  WL_C_061: {area: *AR_C_VAULT4, description: "Near the Daylight Prairie constellation, in a round building."}
-  WL_C_062: {area: *AR_C_VAULT5, description: "To the left of the Isle of Dawn constellation, on the floating skeleton."}
-  WL_C_063: {area: *AR_C_VAULTTEMPLE, description: "Forward, on the way to the Temple monument."}
-  WL_C_064: {area: *AR_C_ARCHIVES, description: "In the hallways after decending twice, behind jars in a room on the left."}
-  WL_C_065: {area: *AR_C_ARCHIVES, description: "In the hallways after decending twice, through a hole in the ceiling of the room with a ladder."}
+  WL_C_059: {area: *AR_C_VAULT1,       visit: 78,  description: "At the top of the ladder on the left."}
+  WL_C_060: {area: *AR_C_VAULT3,       visit: 84,  description: "On the roof of the small temple on a floating island. Follow the floating rock slabs to the right of the Daylight Prairie constellation."}
+  WL_C_061: {area: *AR_C_VAULT4,       visit: 85,  description: "Near the Isle of Dawn constellation, on the highest platform surrounded by stone pillars and a ring of candles."}
+  WL_C_062: {area: *AR_C_VAULT4,       visit: 86,  description: "Near the Daylight Prairie constellation, in a round building."}
+  WL_C_063: {area: *AR_C_VAULT5,       visit: 87,  description: "To the left of the Isle of Dawn constellation, on the floating skeleton."}
+  WL_C_064: {area: *AR_C_VAULT6,       visit: 88,  description: "Forward, on the way to the Temple monument."}
+  WL_C_065: {area: *AR_C_ARCHIVES,     visit: 79,  description: "In the hallways after decending twice, behind jars in a room on the left."}
+  WL_C_066: {area: *AR_C_ARCHIVES,     visit: 80,  description: "In the hallways after decending twice, through a hole in the ceiling of the room with a ladder."}
 
   # Eye of Eden (10)
-  WL_C_066: {area: *AR_C_PRELUDE, description: "At the end of the first section, before the broken door."}
-  WL_C_067: {area: *AR_C_APPROACH, description: "At the end of the second section, in the hallway to the eye of the storm."}
-  WL_C_068: {area: *AR_C_APPROACH, description: "At the end of the second section, in the hallway to the eye of the storm."}
-  WL_C_069: {area: *AR_C_APPROACH, description: "At the end of the second section, in the hallway to the eye of the storm."}
-  WL_C_070: {area: *AR_C_APPROACH, description: "At the end of the second section, in the hallway to the eye of the storm."}
-  WL_C_071: {area: *AR_C_APPROACH, description: "At the end of the second section, in the hallway to the eye of the storm."}
-  WL_C_072: {area: *AR_C_APPROACH, description: "At the end of the second section, in the hallway to the eye of the storm."}
-  WL_C_073: {area: *AR_C_APPROACH, description: "At the end of the second section, in the hallway to the eye of the storm."}
-  WL_C_074: {area: *AR_C_APPROACH, description: "At the end of the second section, in the hallway to the eye of the storm."}
-  WL_C_075: {area: *AR_C_APPROACH, description: "At the end of the second section, in the hallway to the eye of the storm."}
+  WL_C_067: {area: *AR_C_PRELUDE,      visit: 93,  description: "At the end of the first section, before the broken door."}
+  WL_C_068: {area: *AR_C_APPROACH,     visit: 94,  description: "At the end of the second section, in the hallway to the eye of the storm."}
+  WL_C_069: {area: *AR_C_APPROACH,     visit: 95,  description: "At the end of the second section, in the hallway to the eye of the storm."}
+  WL_C_070: {area: *AR_C_APPROACH,     visit: 96,  description: "At the end of the second section, in the hallway to the eye of the storm."}
+  WL_C_071: {area: *AR_C_APPROACH,     visit: 97,  description: "At the end of the second section, in the hallway to the eye of the storm."}
+  WL_C_072: {area: *AR_C_APPROACH,     visit: 98,  description: "At the end of the second section, in the hallway to the eye of the storm."}
+  WL_C_073: {area: *AR_C_APPROACH,     visit: 99,  description: "At the end of the second section, in the hallway to the eye of the storm."}
+  WL_C_074: {area: *AR_C_APPROACH,     visit: 100, description: "At the end of the second section, in the hallway to the eye of the storm."}
+  WL_C_075: {area: *AR_C_APPROACH,     visit: 101, description: "At the end of the second section, in the hallway to the eye of the storm."}
+  WL_C_076: {area: *AR_C_APPROACH,     visit: 102, description: "At the end of the second section, in the hallway to the eye of the storm."}
 
   # Orbit (1)
-  WL_C_076: {area: *AR_C_REBIRTH, description: "Beyond the gate of rebirth. Keep pressing forward into the white until you hear the collection sound and the credits start (autocollect)."}
-  
+  WL_C_077: {area: *AR_C_REBIRTH,      visit: 103, description: "Beyond the gate of rebirth. Keep pressing forward into the white until you hear the collection sound and the credits start (autocollect)."}
 
   # Season of Enchantment (2)
-  WL_X_000: {area: *AR_X_ENCHANTMENT, description: "At the bow of the ship."}
-  WL_X_001: {area: *AR_X_ENCHANTMENT, description: "In the wall of the cave beyond the ship and the polluted pond."}
+  WL_X_000: {area: *AR_X_ENCHANTMENT,  visit: 64,  description: "At the bow of the ship."}
+  WL_X_001: {area: *AR_X_ENCHANTMENT,  visit: 65,  description: "In the wall of the cave beyond the ship and the polluted pond."}
   
   # Season of Sanctuary (8)
-  WL_X_002: {area: *AR_X_SANCTUARY, description: "Floating island near entrance, near the bottom of the waterfall."}
-  WL_X_003: {area: *AR_X_SANCTUARY, description: "Peak of the main island, just inside a small cave."}
-  WL_X_004: {area: *AR_X_SANCTUARY, description: "Floating island on the far side of the main island from the entrance."}
-  WL_X_005: {area: *AR_X_SANCTUARY, description: "Cliff face near the geyser on the opposite side of the main island."}
-  WL_X_006: {area: *AR_X_SANCTUARY, description: "In the jelleyfish sea cave on the opposide side of the main island."}
-  WL_X_007: {area: *AR_X_SANCTUARY, description: "On a boulder deep in the gorge at the base of the large waterfall on main island."}
-  WL_X_008: {area: *AR_X_SANCTUARY, description: "On an outcropping at the top of the cave to the left of the large waterfall, marked by a ladder against the wall."}
-  WL_X_009: {area: *AR_X_SANCTUARY, description: "At the top of the Dark Crab cavern inside the main island."}
+  WL_X_002: {area: *AR_X_SANCTUARY,    visit: 19,  description: "Floating island near entrance, near the bottom of the waterfall."}
+  WL_X_003: {area: *AR_X_SANCTUARY,    visit: 20,  description: "Peak of the main island, just inside a small cave."}
+  WL_X_004: {area: *AR_X_SANCTUARY,    visit: 21,  description: "Floating island on the far side of the main island from the entrance."}
+  WL_X_005: {area: *AR_X_SANCTUARY,    visit: 22,  description: "Cliff face near the geyser on the opposite side of the main island."}
+  WL_X_006: {area: *AR_X_SANCTUARY,    visit: 23,  description: "In the jelleyfish sea cave on the opposide side of the main island."}
+  WL_X_007: {area: *AR_X_SANCTUARY,    visit: 24,  description: "On a boulder deep in the gorge at the base of the large waterfall on main island."}
+  WL_X_008: {area: *AR_X_SANCTUARY,    visit: 25,  description: "On an outcropping at the top of the cave to the left of the large waterfall, marked by a ladder against the wall."}
+  WL_X_009: {area: *AR_X_SANCTUARY,    visit: 26,  description: "At the top of the Dark Crab cavern inside the main island."}
 
   # Season of Prophecy (4)
-  WL_X_010: {area: *AR_X_PROPHECY, description: "At the end of the Trial of Water."}
-  WL_X_011: {area: *AR_X_PROPHECY, description: "At the end of the Trial of Earth."}
-  WL_X_012: {area: *AR_X_PROPHECY, description: "At the end of the Trial of Air."}
-  WL_X_013: {area: *AR_X_PROPHECY, description: "At the end of the Trial of Fire."}
+  WL_X_010: {area: *AR_X_PROPHECY,     visit: 89,  description: "At the end of the Trial of Water."}
+  WL_X_011: {area: *AR_X_PROPHECY,     visit: 90,  description: "At the end of the Trial of Earth."}
+  WL_X_012: {area: *AR_X_PROPHECY,     visit: 91,  description: "At the end of the Trial of Air."}
+  WL_X_013: {area: *AR_X_PROPHECY,     visit: 92,  description: "At the end of the Trial of Fire."}
 
   # Season of Dreams (5)
-  WL_X_014: {area: *AR_X_DREAMS, description: "On the roof of the tower near the exit to Hermit Valley. Strong down draft."}
-  WL_X_015: {area: *AR_X_DREAMS, description: "In a cave in the mountain to the left of the entrance from the social area."}
-  WL_X_016: {area: *AR_X_DREAMS, description: "In a cave in the mountain to the right of the entrance from the social area, below the hotspring."}
-  WL_X_017: {area: *AR_X_HERMIT, description: "Behind the Yeti's cave, in a window sill."}
-  WL_X_018: {area: *AR_X_HERMIT, description: "Down slope from the lift drop-off (turn around after the cutscene plays), in an icy cave high up on the right canyon wall."}
+  WL_X_014: {area: *AR_X_DREAMS,       visit: 55,  description: "On the roof of the tower near the exit to Hermit Valley. Strong down draft."}
+  WL_X_015: {area: *AR_X_DREAMS,       visit: 58,  description: "In a cave in the mountain to the left of the entrance from the social area."}
+  WL_X_016: {area: *AR_X_DREAMS,       visit: 59,  description: "In a cave in the mountain to the right of the entrance from the social area, below the hotspring."}
+  WL_X_017: {area: *AR_X_HERMIT,       visit: 56,  description: "Behind the Yeti's cave, in a window sill."}
+  WL_X_018: {area: *AR_X_HERMIT,       visit: 57,  description: "Down slope from the lift drop-off (turn around after the cutscene plays), in an icy cave high up on the right canyon wall."}
 
   # Season of Assembly (2)
-  WL_X_019: {area: *AR_X_ASSEMBLY, description: "On the right, high up in the hollow of a tree."}
-  WL_X_020: {area: *AR_X_ASSEMBLY, description: "In the basement of the treehouse."}
+  WL_X_019: {area: *AR_X_ASSEMBLY,     visit: 28,  description: "On the right, high up in the hollow of a tree."}
+  WL_X_020: {area: *AR_X_ASSEMBLY,     visit: 29,  description: "In the basement of the treehouse."}
 
   # Season of the Little Prince (3)
-  WL_X_021: {area: *AR_X_PRINCE, description: "On top of the large jar on the right."}
-  WL_X_022: {area: *AR_X_PRINCE, description: "On top of the large lamp post on the left."}
-  WL_X_023: {area: *AR_X_PRINCE, description: "In the basement of the ruler's floating throne platform."}
+  WL_X_021: {area: *AR_X_PRINCE,       visit: 81,  description: "On top of the large jar on the right."}
+  WL_X_022: {area: *AR_X_PRINCE,       visit: 82,  description: "On top of the large lamp post on the left."}
+  WL_X_023: {area: *AR_X_PRINCE,       visit: 83,  description: "In the basement of the ruler's floating throne platform."}
 
   # Season of Flight (1)
-  WL_X_024: {area: *AR_X_FLIGHT, description: "In a wind tunnel near the spirit guide. Go through the right-most tunnel on the bottom of the main island."}
+  WL_X_024: {area: *AR_X_FLIGHT,       visit: 27,  description: "In a wind tunnel near the spirit guide. Go through the right-most tunnel on the bottom of the main island."}

@@ -8,9 +8,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Winged Light Checklist &mdash; Sky: Children of the Light</title>
+  <!-- https://www.datatables.net/download/ -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.3/b-2.0.1/b-print-2.0.1/datatables.min.css"/>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.11.3/b-2.0.1/b-print-2.0.1/datatables.min.js"></script>
+  <!-- INIT -->
+  <script>
+    $(document).ready(
+      function () {
+        $('#stars-table').DataTable({
+          "buttons": ["print"]
+        });
+      }
+    )
+  </script>
 </head>
 <body>
-  <section id="wings">
+  <section id="stars-summary">
     <h1>Summary</h1>
     <table>
       <tbody>
@@ -27,7 +40,7 @@
           <th>Available</th>
           {%- assign stars = site.data.collectibles.stars.size -%}
           {%- assign ancestor_buffs = 47 -%}
-          {%- assign wandering_buffs = 0 -%}
+          {%- assign wandering_buffs = 32 -%}
           <td><input type="number" value="{{ stars }}" readonly="readonly" disabled="disabled"></input></td>
           <td><input type="number" value="{{ ancestor_buffs }}" readonly="readonly" disabled="disabled"></input></td>
           <td><input type="number" value="{{ wandering_buffs }}" readonly="readonly" disabled="disabled"></input></td>
@@ -37,7 +50,7 @@
           <th>Collected</th>
           <td>
             <!-- Winged Light -->
-            <input type="number" value="0"></input>
+            <input type="number" value="0" readonly="readonly" disabled="disabled"></input>
             <input type="text" value="0%" readonly="readonly" disabled="disabled"></input>
           </td>
           <td>
@@ -59,25 +72,30 @@
       </tbody>
     </table>
   </section>
-  <section id="stars">
+  <section id="stars-list">
     <h1>List of Winged Light</h1>
-    <table>
+    <p>Location descriptions of Winged Lights are based on a hypothetical path from the primary entrance to the primary exit of the area within which the Winged Light is found.</p>
+    <p>The term "forward" refers to the direction along that path, "left" is to the left of the path, and "right" is to the right of the path.</p>
+    <p>The "Visit Order" of Winged Lights is a suggestion, and has no bearing upon the descriptions of other Winged Light in the area.</p>
+    <table id="stars-table">
       <thead>
         <tr>
+          <th>Visit Order</th>
           <th>Acquired</th>
           <th>Realm</th>
           <th>Area</th>
           <th>Id</th>
-          <th>Description</th>
+          <th>Location</th>
         </tr>
       </thead>
       <tbody>
         {%- for star in site.data.collectibles.stars -%}
-          {% assign id = star[0] %}
-          {% assign light = star[1] %}
-          {% assign area = site.data.collectibles.areas[light.area] %}
-          {% assign realm = site.data.collectibles.realms[area.realm] %}
+          {%- assign id = star[0] -%}
+          {%- assign light = star[1] -%}
+          {%- assign area = site.data.collectibles.areas[light.area] -%}
+          {%- assign realm = site.data.collectibles.realms[area.realm] -%}
           <tr>
+            <td>{{ light.visit }}</td>
             <td><input type="checkbox" name="{{ id }}" id="{{ id }}"></td>
             <td>{{ realm }}</td>
             <td>
@@ -89,7 +107,7 @@
               &nbsp;<span class="place-caption">({{ area.caption }})</span>
               {%- endif -%}
             </td>
-            <td><a href="#{{ id }}">{{ id }}</a></td>
+            <td>{{ id }}</td>
             <td>{{ light.description }}</td>
           </tr>
         {%- endfor -%}
