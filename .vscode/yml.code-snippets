@@ -1,0 +1,53 @@
+{
+	// Place your skygame-starlist workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Realm": {
+		"scope": "yml,yaml",
+		"prefix": "realm",
+		"body": [
+			"R${1|c,x|}_${2:000}: $3",
+			"$0"
+		],
+		"description": "Add a new realm"
+	},
+	"Area": {
+		"scope": "yml,yaml",
+		"prefix": "area",
+		"body": [
+			"A${1|c,x|}_${2:000}: {realm: R${3|c,x|}_${4:000}, name: $5}",
+			"$0"
+		],
+		"description": "Add a new area."
+	},
+	"Star": {
+		"scope": "yml,yaml",
+		"prefix": "star",
+		"body": [
+			"W${1|c,x|}_${2:000}: {area: *A${3|c,x|}_${4:000}, description: \"$5\"}",
+			"$0"
+		],
+		"description": "Add a new winged light/star."
+	},
+	"Spirit": {
+		"scope": "yml,yaml",
+		"prefix": "spirit",
+		"body": [
+			"$0"
+		],
+		"description": "Add a new ancestor spirit."
+	}
+}
